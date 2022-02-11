@@ -118,7 +118,7 @@ open class HPScrollViewController: UIViewController {
     weak var childHeightConstraint: NSLayoutConstraint?
     
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -147,7 +147,7 @@ open class HPScrollViewController: UIViewController {
         }
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if #available(iOS 11.0, *) {
@@ -160,7 +160,7 @@ open class HPScrollViewController: UIViewController {
     }
 
     @available(iOS 11.0, *)
-    public override func viewSafeAreaInsetsDidChange() {
+    override open func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
         
         if scrollView.contentInsetAdjustmentBehavior != .never {
